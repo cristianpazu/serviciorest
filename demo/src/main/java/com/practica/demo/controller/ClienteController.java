@@ -21,14 +21,17 @@ public class ClienteController {
     public ResponseEntity<List<Cliente>> findAll(){
         return  new ResponseEntity<>(clienteService.findAll(), HttpStatus.OK);
     }
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Cliente> create(@RequestBody Cliente cliente){
         return new ResponseEntity<>(clienteService.create(cliente), HttpStatus.CREATED);
     }
+    @CrossOrigin
     @PutMapping
     public  ResponseEntity<Object> update(@RequestBody Cliente cliente){
         return  new ResponseEntity<>(clienteService.update(cliente), HttpStatus.OK);
     }
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Cliente>  finById(@PathVariable("id") Integer idcliente){
         Cliente cliente = clienteService.findById(idcliente);
@@ -40,6 +43,7 @@ public class ClienteController {
 
 
     }
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public ResponseEntity<Object>  delete(@PathVariable("id")  Integer idcliente) throws Exception {
        Cliente cliente = clienteService.findById(idcliente);

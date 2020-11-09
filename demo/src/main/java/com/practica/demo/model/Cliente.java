@@ -8,20 +8,20 @@ public class Cliente{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer idCliente;
-    @Column(name = "nombre", length = 20)
+    @Column(name = "nombre", length = 200)
     private String name;
 
-    @Column(name = "apellido",  length = 20)
+    @Column(name = "apellido",  length = 200)
     private  String apellido;
 
-    @Column(name = "direccion",  length = 20)
-    private String direccion;
+    @Column(name = "documento",  length = 200)
+    private String documento;
 
-    @Column(name = "telefono",  length = 20)
+    @Column(name = "telefono",  length = 200)
     private String telefono;
 
-    @Column(name = "email", length = 20)
-    private String email;
+    @Column(name = "sexo", length = 200)
+    private String sexo;
 
     public Integer getIdCliente() {
         return idCliente;
@@ -47,13 +47,12 @@ public class Cliente{
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDocumento() {
+        return documento;
     }
 
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public String getTelefono() {
@@ -64,11 +63,11 @@ public class Cliente{
         this.telefono = telefono;
     }
 
-    public String getEmail() {
-        return email;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 }
